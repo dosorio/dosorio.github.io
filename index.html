@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://raw.githubusercontent.com/dosorio/dosorio.github.io/main/assets/img/headshot.jpg">
   <title>Daniel Osorio, Ph.D.</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" />
@@ -12,66 +11,6 @@
     a {
       font-size: 18px;
     }
-
-    /* Desktop: header row with name left, buttons right */
-    .mobile-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media (max-width: 767px) {
-      body,
-      a {
-        font-size: 16px;
-      }
-
-      /* Stack header: name on top, buttons below */
-      .mobile-header {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start !important;
-      }
-
-      .mobile-header .ui.button {
-        float: none !important;
-        margin: 3px 4px 3px 0 !important;
-        display: inline-block;
-      }
-
-      .mobile-header .header-buttons {
-        margin-top: 0.5em;
-      }
-
-      /* Prevent date from overlapping long titles */
-      .ui.celled.list .header {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 0.2em;
-      }
-
-      .ui.celled.list .header .ui.right.floated {
-        float: none !important;
-        font-weight: normal;
-        opacity: 0.7;
-      }
-
-      /* Tighter padding on mobile */
-      .ui.grid {
-        padding-left: 3% !important;
-        padding-right: 3% !important;
-      }
-
-      .ui.celled.list > .item {
-        padding: 0.7em 0.4em;
-      }
-
-      /* Stack research interests left-aligned */
-      .right.aligned.column {
-        text-align: left !important;
-      }
-    }
   </style>
 
 </head>
@@ -80,29 +19,26 @@
   <div class="ui grid" style="margin-top: 10px; padding: 0 5%;">
     <div class="row">
       <div class="column">
-        <h1 class="ui header mobile-header">
-          <div>
-            <img class="ui avatar image"
-              src="https://raw.githubusercontent.com/dosorio/dosorio.github.io/main/assets/img/headshot.jpg">
-            <span>Daniel Osorio, Ph.D.</span>
-          </div>
-          <div class="header-buttons">
-            <a class="ui tiny basic button" href="https://scholar.google.com/citations?user=uA4VdlIAAAAJ&hl=en"
-              style="margin-top: 5px;" target="_blank">
-              <i class="fas fa-graduation-cap"></i>
-              Google Scholar
-            </a>
-            <a class="ui tiny basic button" href="https://www.linkedin.com/in/dcosorioh"
-              style="margin-top: 5px;" target="_blank">
-              <i class="fab fa-linkedin"></i>
-              LinkedIn
-            </a>
-            <a class="ui tiny basic button" href="https://github.com/dosorio" style="margin-top: 5px;"
-              target="_blank">
-              <i class="fab fa-github"></i>
-              Github
-            </a>
-          </div>
+        <h1 class="ui header">
+          <a class="ui right floated tiny basic button" href="https://github.com/dosorio" style="margin-top: 5px;"
+            target="_blank">
+            <i class="fab fa-github"></i>
+            Github
+          </a>
+          <a class="ui right floated tiny basic button" href="https://www.linkedin.com/in/dcosorioh"
+            style="margin-top: 5px;" target="_blank">
+            <i class="fab fa-linkedin"></i>
+            LinkedIn
+          </a>
+          <a class="ui right floated tiny basic button"
+            href="https://scholar.google.com/citations?user=uA4VdlIAAAAJ&hl=en" style="margin-top: 5px;"
+            target="_blank">
+            <i class="fas fa-graduation-cap"></i>
+            Google Scholar
+          </a>
+          <img class="ui avatar image"
+            src="https://raw.githubusercontent.com/dosorio/dosorio.github.io/main/assets/img/headshot.jpg">
+          <span>Daniel Osorio, Ph.D.</span>
         </h1>
       </div>
     </div>
