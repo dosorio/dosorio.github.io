@@ -44,7 +44,7 @@ def month_label(today):
 
 
 def floor_label(value, step, suffix=""):
-    """2235 -> '2,200+'; 360271 with step 1000 and suffix 'K' -> '360K+'."""
+    """2241 with step 10 -> '2,240+'; 360271 with step 1000 and suffix 'K' -> '360K+'."""
     floored = value // step * step
     if suffix:
         return f"{floored // step:,}{suffix}+"
@@ -157,7 +157,7 @@ def main():
         (citations, h_index), source = scholar_metrics()
         if citations <= 0 or h_index <= 0:
             raise ValueError(f"implausible values: citations={citations}, h-index={h_index}")
-        html = set_metric(html, "citations", floor_label(citations, 100))
+        html = set_metric(html, "citations", floor_label(citations, 10))
         html = set_metric(html, "h-index", str(h_index))
         html = set_metric(html, "scholar-date", month_label(today))
         print(f"Scholar ({source}): citations={citations:,}, h-index={h_index}")
